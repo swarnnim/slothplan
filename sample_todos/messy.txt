@@ -1,0 +1,13 @@
+# A genuinely messy Tuesday to-do dump (used in the recorded demo)
+- Pay electricity bill, due Friday or they cut the power
+- Reply to Priya about the wedding RSVP — deadline is tomorrow
+- Submit the Hacktoberfest Week 3 entry README tonight
+- Call dentist to reschedule the appointment
+- Buy milk and eggs
+- Learn Rust someday
+- Reorganize the bookshelf
+- Start learning Spanish
+- Clean out the garage this weekend
+- Delete that crypto spam email from "DOUBLE YOUR COINS"
+- Reorganize my Netflix watchlist
+- Call mom back — she called twice today
