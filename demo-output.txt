@@ -1,0 +1,88 @@
+=== SlothPlan demo — 2026-10-20 04:25 UTC ===
+Model: Qwen2.5-0.5B-Instruct (Q4_K_M, open weights, Apache 2.0)
+Engine: llama.cpp (MIT). 100% local, greedy decoding.
+Input: sample_todos/messy.txt (12 items)
+
+--- run 1: full triage with the local model ---
+[1/12] triaging: Pay electricity bill, due Friday or they cut the power
+[2/12] triaging: Reply to Priya about the wedding RSVP — deadline is tomorrow
+[3/12] triaging: Submit the Hacktoberfest Week 3 entry README tonight
+[4/12] triaging: Call dentist to reschedule the appointment
+[5/12] triaging: Buy milk and eggs
+[6/12] triaging: Learn Rust someday
+[7/12] triaging: Reorganize the bookshelf
+[8/12] triaging: Start learning Spanish
+[9/12] triaging: Clean out the garage this weekend
+[10/12] triaging: Delete that crypto spam email from "DOUBLE YOUR COINS"
+[11/12] triaging: Reorganize my Netflix watchlist
+[12/12] triaging: Call mom back — she called twice today
+=== SLOTHPLAN triage ===
+method: local open-weight model Qwen2.5-0.5B-Instruct (Q4_K_M, Apache 2.0) via llama.cpp (greedy decoding); every verdict parsed and validated, bucket contract enforced deterministically
+
+DO TODAY (max 3) — your only decisions today:
+  2. Reply to Priya about the wedding RSVP — deadline is tomorrow
+     -> (no reason given)
+  3. Submit the Hacktoberfest Week 3 entry README tonight
+     -> (no reason given)
+  8. Start learning Spanish
+     -> (no reason given)
+
+DEFER — officially not today's problem:
+  1. Pay electricity bill, due Friday or they cut the power
+     -> no deadline, start next month
+  11. Reorganize my Netflix watchlist
+     -> (no reason given)
+
+DELETE — permission granted, let it go:
+  4. Call dentist to reschedule the appointment
+     -> (no reason given)
+  5. Buy milk and eggs
+     -> it's spam, nothing of value is lost
+  6. Learn Rust someday
+     -> (no reason given)
+  7. Reorganize the bookshelf
+     -> (no reason given)
+  9. Clean out the garage this weekend
+     -> (no reason given)
+  10. Delete that crypto spam email from "DOUBLE YOUR COINS"
+     -> (no reason given)
+  12. Call mom back — she called twice today
+     -> (no reason given)
+
+Everything deferred is still on your list, just not on today's. Go be a sloth.
+
+--- run 2: deterministic rule-based fallback (--no-llm) ---
+=== SLOTHPLAN triage ===
+method: rule-based fallback (--no-llm was passed; no model was run)
+
+DO TODAY (max 3) — your only decisions today:
+  1. Pay electricity bill, due Friday or they cut the power
+     -> looks time-sensitive — it names a deadline, payment, or an urgent event
+  2. Reply to Priya about the wedding RSVP — deadline is tomorrow
+     -> looks time-sensitive — it names a deadline, payment, or an urgent event
+  3. Submit the Hacktoberfest Week 3 entry README tonight
+     -> looks time-sensitive — it names a deadline, payment, or an urgent event
+
+DEFER — officially not today's problem:
+  4. Call dentist to reschedule the appointment
+     -> looks time-sensitive — it names a deadline, payment, or an urgent event [moved from today: the 3-item cap keeps your day lazy]
+  5. Buy milk and eggs
+     -> not urgent — it keeps just fine until another day
+  6. Learn Rust someday
+     -> not urgent — it keeps just fine until another day
+  7. Reorganize the bookshelf
+     -> not urgent — it keeps just fine until another day
+  8. Start learning Spanish
+     -> not urgent — it keeps just fine until another day
+  9. Clean out the garage this weekend
+     -> not urgent — it keeps just fine until another day
+  12. Call mom back — she called twice today
+     -> looks time-sensitive — it names a deadline, payment, or an urgent event [moved from today: the 3-item cap keeps your day lazy]
+
+DELETE — permission granted, let it go:
+  10. Delete that crypto spam email from "DOUBLE YOUR COINS"
+     -> matches a junk pattern — nothing of value is lost
+  11. Reorganize my Netflix watchlist
+     -> matches a junk pattern — nothing of value is lost
+
+Everything deferred is still on your list, just not on today's. Go be a sloth.
